@@ -15,16 +15,31 @@ select.addEventListener("change", (e) => {
   selectedValue = Number(e.target.value);
 });
 
+const disabledFunction = () => {
+  player1.setAttribute("disabled", "!disabled");
+  player2.setAttribute("disabled", "!disabled");
+};
+
 player1.addEventListener("click", () => {
   while (counter1 < selectedValue) {
     counter1++;
     if (counter1 == selectedValue) {
       leftSide.innerHTML = counter1;
+      leftSide.style.color = "green";
+      disabledFunction();
+
+      return;
+    } else if (counter1 == selectedValue - 1) {
+      leftSide.innerHTML = counter1;
       leftSide.style.color = "red";
       return;
+    } else {
+      leftSide.innerHTML = counter1;
+      leftSide.style.color = "black";
     }
-    leftSide.innerHTML = counter1;
+
     // leftSide.style.color = "r";
+
     return;
   }
   //   leftSide.innerHTML = counter1;
@@ -35,10 +50,19 @@ player2.addEventListener("click", () => {
     counter2++;
     if (counter2 == selectedValue) {
       rightSide.innerHTML = counter2;
+      rightSide.style.color = "green";
+      disabledFunction();
+
+      return;
+    } else if (counter2 == selectedValue - 1) {
+      rightSide.innerHTML = counter2;
       rightSide.style.color = "red";
       return;
+    } else {
+      rightSide.innerHTML = counter2;
+      rightSide.style.color = "black";
     }
-    rightSide.innerHTML = counter2;
+
     // leftSide.style.color = "r";
     return;
   }
@@ -50,4 +74,6 @@ reset.addEventListener("click", () => {
   counter2 = 0;
   leftSide.innerHTML = counter1;
   rightSide.innerHTML = counter2;
+  leftSide.style.color = "black";
+  rightSide.style.color = "black";
 });
