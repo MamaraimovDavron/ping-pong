@@ -1,0 +1,169 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("./1665465208_3-31.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 150px auto;
+}
+
+.container {
+  border: 1px solid white;
+  width: 20%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 12px;
+  .card-header {
+    border-radius: 12px 12px 0 0;
+    .card-img {
+      width: 100%;
+      height: 100%;
+      img {
+        border-radius: 12px 12px 0 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .card-body {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    h3 {
+      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+      font-size: 15px;
+      font-weight: bold;
+    }
+    .score {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      //   border: 1px solid;
+      gap: 5px;
+      h2 {
+        // border: 1px solid red;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+    }
+
+    #select {
+      border: 1px solid;
+      padding: 10px;
+      border: none;
+      box-shadow: 0px 0px 5px 1px gray;
+      font-family: "Courier New", Courier, monospace;
+      font-weight: 900;
+      font-size: 16px;
+      option {
+        font-family: "Courier New", Courier, monospace;
+        font-weight: 900;
+        font-size: 16px;
+        border: none;
+      }
+    }
+
+    .btns {
+      display: flex;
+      flex-direction: column;
+      //   align-items: center;
+      justify-content: center;
+      gap: 5px;
+      //   border: 1px solid;
+
+      .players {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        .players-btn {
+          border: none;
+          padding: 8px 16px;
+          border-radius: 4px;
+          font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+            "Lucida Sans", Arial, sans-serif;
+          font-weight: bold;
+          font-size: 15px;
+          color: white;
+          transition: all 0.2s linear;
+          cursor: pointer;
+        }
+
+        #player1 {
+          border: 1px solid #2bd42c;
+          background-color: #2bd42c;
+          &:hover {
+            color: #2bd42c;
+            background-color: white;
+            border: 1px solid #2bd42c;
+          }
+        }
+        #player2 {
+          border: 1px solid #29d79f;
+          background-color: #29d79f;
+          &:hover {
+            color: #29d79f;
+            background-color: white;
+            border: 1px solid #29d79f;
+          }
+        }
+      }
+
+      .btn-reset {
+        border: none;
+        border: 1px solid #ab2937;
+        padding: 4px 8px;
+        border-radius: 4px;
+        color: white;
+        background-color: #ab2937;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        font-weight: bold;
+        font-size: 15px;
+        transition: all 0.3s linear;
+        cursor: pointer;
+        &:hover {
+          background-color: white;
+          border: 1px solid #ab2937;
+          color: #ab2937;
+        }
+      }
+    }
+  }
+  .card-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 100%;
+    border-radius: 0 0 12px 12px;
+    a {
+      font-size: 20px;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: bold;
+      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+      &:hover {
+        color: #ab2937;
+      }
+    }
+  }
+}

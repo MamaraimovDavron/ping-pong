@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Ping Pong</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card-header">
+        <div class="card-img">
+          <img
+            src="./nastolnyj-tennis-i-ping-pong-raznye-vidy-sporta.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="card-body">
+        <h3>PingPong ScoreKeeper</h3>
+        <span class="score">
+          <h2 class="left-side">0</h2>
+          <h2 class="middle-side">to</h2>
+          <h2 class="right-side">0</h2>
+        </span>
+        <select id="select">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+        </select>
+        <div class="btns">
+          <div class="players">
+            <button class="players-btn" id="player1">+Player1</button>
+            <button class="players-btn" id="player2">+Player2</button>
+          </div>
+          <button class="btn-reset" id="reset">Reset</button>
+        </div>
+      </div>
+      <div class="card-footer">
+        <a href="#">Telegram</a>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
