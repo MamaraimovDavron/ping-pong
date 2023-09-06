@@ -16,17 +16,32 @@ select.addEventListener("change", (e) => {
 });
 
 player1.addEventListener("click", () => {
-  counter1++;
-  if (counter1 == selectedValue) {
+  while (counter1 < selectedValue) {
+    counter1++;
+    if (counter1 == selectedValue) {
+      leftSide.innerHTML = counter1;
+      leftSide.style.color = "red";
+      return;
+    }
     leftSide.innerHTML = counter1;
-    leftSide.style.color = "red";
+    // leftSide.style.color = "r";
     return;
   }
-  leftSide.innerHTML = counter1;
+  //   leftSide.innerHTML = counter1;
 });
 
 player2.addEventListener("click", () => {
-  counter2++;
+  while (counter2 < selectedValue) {
+    counter2++;
+    if (counter2 == selectedValue) {
+      rightSide.innerHTML = counter2;
+      rightSide.style.color = "red";
+      return;
+    }
+    rightSide.innerHTML = counter2;
+    // leftSide.style.color = "r";
+    return;
+  }
   rightSide.innerHTML = counter2;
 });
 
